@@ -207,12 +207,12 @@ st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 sidebar = st.sidebar
 with sidebar:
     ndays = st.number_input('Days to Predict:', min_value=1, max_value=90, value=10)
-    st.text_input('Dataset:',dataset,disabled=True)
+    st.markdown(f"Link to Dataset: {dataset}")
     #st.text_input('Window Slicing:',f"last {sequenceLength} days",disabled=True)
     submitted = st.button("Add to Dataset",type='primary')
 
-
-st.title(":bar_chart: Forcasting Oil Price by Days")
+st.title(":bar_chart: Forcasting Oil Price")
+st.write("by Istifa Shania Putri(23523007) & Nadhira Virliany Daradjat(23523041)")
 
 st.markdown("###")
 
