@@ -199,7 +199,7 @@ page_title = "OIL PRICE FORECAST APP"
 page_icon = ":bar_chart:"
 layout = "wide"
 
-dataset = "yFinance"
+dataset = "https://finance.yahoo.com/quote/CL%3DF/history?p=CL%3DF"
 sequenceLength = 3
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
@@ -208,7 +208,7 @@ sidebar = st.sidebar
 with sidebar:
     ndays = st.number_input('Days to Predict:', min_value=1, max_value=90, value=10)
     st.text_input('Dataset:',dataset,disabled=True)
-    st.text_input('Window Slicing:',f"last {sequenceLength} days",disabled=True)
+    #st.text_input('Window Slicing:',f"last {sequenceLength} days",disabled=True)
     submitted = st.button("Add to Dataset",type='primary')
 
 
